@@ -1,3 +1,4 @@
+
 //log in log out pages 
 //profiles 
 
@@ -46,3 +47,4 @@ function callApi(){
 searchbtn.addEventListener('click', () => {
     callApi();
 });
+
