@@ -3,36 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project 2 - Group 10</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>Group 10</h1>
-      <nav>
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-btn" id="logout">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-      </nav>
+  <div>
+    <header>
+      <h1>Welcome To Project 2</h1>
+      <p>This site enables you to have your
+        own profile to host all of your all time favorite shows</p>
     </header>
-    <main class="container container-fluid mt-5">
-      {{{ body }}}
-    </main>
+    <nav>
+      <!-- <a href="/">Home Page</a> -->
+      <!-- {{#if loggedIn}} -->
+      <a href="/login">Login</a>
+      <!-- {{else}} -->
+      <a href="/profile">Create Profile</a>
+      <!-- {{/if}} -->
+      <button id="logout" class="logout-btn">Logout</button>
+    </nav>
     <footer>
 
     </footer>
   </div>
-
   <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}}
   <scrip src="js/logout.js"></scrip>
-  {{/if}}
+  {{/if}} --}}
 
   <script src="/assets/js/script.js"></script>
 </body>
