@@ -32,8 +32,12 @@ function callApi(){
                 let showName = data[i].show.name;
                 let showSum = data[i].show.summary
                 console.log(showName)
-                const showsContainer = `<h2>${showName}</h2> ${showSum}<button class="add-show" type="button">Add Show</button>`
+                const showsContainer = `<div id="show${i}"><h2>${showName}</h2> ${showSum}<button class="add-show" type="button">Add Show</button></div>`
                 results.innerHTML += showsContainer;
+                const addShowbtn = document.querySelector('.add-show');
+                addShowbtn.addEventListener('click', () =>{
+                    //code to select the show
+                })
            }
             return;
     })
