@@ -1,0 +1,99 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  padding: 30px;
+  border-radius: 50vh;
+  text-align: center;
+  background: gray;
+  color: var(--light);
+  font-size: 2.25rem;
+}
+p {
+  padding: 40px;
+  text-align: center;
+  background: gray;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: grey;
+  cursor: pointer;
+}
+
+nav a {
+  color: var(--light);
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 100%;
+  margin-left: 16px;
+  text-decoration: underline;
+}
+
+.form {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.login-form {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
+}
+
+.form header {
+  color: var(--light);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--tertiary);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.form-body {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    align-items: center;
+  } */
+
+textarea {
+  overflow: auto;
+}
