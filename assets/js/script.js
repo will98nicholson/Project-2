@@ -21,8 +21,6 @@ function callApi(){
     console.log(search);
     console.log(tvAPI);
 
-
-    
     fetch(tvAPI)
     .then(response => {
         return response.json();
@@ -34,7 +32,7 @@ function callApi(){
                 let showName = data[i].show.name;
                 let showSum = data[i].show.summary
                 console.log(showName)
-                const showsContainer = `<h2>${showName}</h2> ${showSum}`
+                const showsContainer = `<h2>${showName}</h2> ${showSum}<button class="add-show" type="button">Add Show</button>`
                 results.innerHTML += showsContainer;
            }
             return;
