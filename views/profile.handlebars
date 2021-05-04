@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Welcome Back, {{name}}!</h2>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <h2>Search for your favorite shows!</h2>
+                    <div class="input-group">
+                        <input type="text" class="form-control showsInput" id="typeShows" placeholder="Enter Show Name">
+                        <div class="input-group-append">
+                            <button class="btn fas fa-search" id="searchButton" type="submit"></button>
+                        </div>
+                    </div>
+                    <ul class="list-group">
+                    </ul>
+                </div>
+            </div>
+</body>
+
+</html>
