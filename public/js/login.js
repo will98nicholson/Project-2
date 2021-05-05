@@ -1,4 +1,4 @@
-const responseStatus = response.statusText;
+// const responseStatus = response.statusText;
 
 const signupFunction = async (event) => {
     event.preventDefault();
@@ -8,16 +8,16 @@ const signupFunction = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
 
     if (name && email && password) {
-        const response = await fetch('/api/users', {
+        const response = await fetch('/api/user-routes', {
             method: 'POST',
             body: JSON.stringify({ name, email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/homepage');
         } else {
-            alert(responseStatus);
+            alert(response.statusText);
         }
     }
 }
@@ -38,16 +38,16 @@ const loginFunction = async (event) => {
 
         if (response.ok) {
             // Successful login sends to profile handlebar
-            document.location.replace('/profile');
+            document.location.replace('/homepage');
         } else {
-            alert(responseStatus);
+            alert(response.statusText);
         }
     }
 };
 document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    .addEventListener('submit', loginFunction);
 
 document
     .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+    .addEventListener('submit', signupFunction);
