@@ -30,7 +30,7 @@ const loginFunction = async (event) => {
 
     if (email && password) {
         // POST API request 
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/user-routes/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
