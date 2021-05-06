@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const { Project } = require('../models');
+const { User } = require('./../models/');
 
 router.get('/', async (req, res) => {
   try {
@@ -20,9 +20,9 @@ router.get('/login', (req, res) => {
 });
 router.get('/profile', async (req, res) => {
   try {
-    // const posts = await Post.findAll({});
-    // console.log(posts)
-    // console.log(posts);
+    // const profiles = await User.findAll({});
+    // console.log(profiles)
+
     res.render('profile');
   } catch (err) {
     console.log(err);
