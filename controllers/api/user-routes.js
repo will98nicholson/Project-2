@@ -19,8 +19,9 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
+        console.log("hit route")
         const userData = await User.findOne({ where: { email: req.body.email } });
-
+        console.log(userData);
         if (!userData) {
             res
                 .status(400)
@@ -36,7 +37,7 @@ router.post('/login', async (req, res) => {
                 .json({ message: 'Incorrect email or password, please try again' });
             return;
         }
-
+        console.log(validPassword);
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -45,7 +46,7 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (err) {
-        res.status(400).json(err);
+        res.status(400).json(err.message);
     }
 });
 
