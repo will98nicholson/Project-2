@@ -1,8 +1,6 @@
 html {
   font-size: 62.5%;
   background-color: #242424;
-}
-html .navigation {
   max-height: none;
   position: relative;
   opacity: 1;
@@ -89,15 +87,6 @@ h2,
   transition: 0.15s opacity ease-out;
 }
 
-@media only screen and (max-width: 749px) {
-  .feature-row {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
 @media only screen and (min-width: 750px) {
   .feature-row__heading::before {
     content: "";
@@ -120,12 +109,8 @@ h2,
   background-position: center center;
 }
 
-@media only screen and (max-width: 749px) {
-  .feature-row__text {
-    text-align: center;
-    padding: 0 20px;
-    order: 1;
-  }
+.feature-row--feature-row-0 {
+  background-color: #c3c9c3;
 }
 
 @media only screen and (min-width: 750px) {
@@ -143,7 +128,6 @@ h2,
   top: 0;
   left: 0;
   background-color: white;
-  max-height: 0;
   width: 100%;
   text-align: center;
   overflow-x: hidden;
@@ -153,6 +137,10 @@ h2,
   transition: opacity 0.25s ease-out;
   pointer-events: none;
   z-index: 5;
+  max-height: none;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .navigation__container {
