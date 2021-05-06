@@ -38,7 +38,7 @@ const loginFunction = async (event) => {
 
         if (response.ok) {
             // Successful login sends to profile handlebar
-            document.location.replace('/homepage');
+            document.location.replace('/profile');
         } else {
             alert(response.statusText);
         }
