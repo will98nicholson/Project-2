@@ -3,12 +3,9 @@ html {
   background-color: #242424;
   max-height: none;
   position: relative;
-  opacity: 1;
-  pointer-events: auto;
 }
 
-body,
-input {
+body {
   font-family: "Quattrocento Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -18,13 +15,6 @@ input {
   background-color: white;
 }
 
-.icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-}
-
 .page-width {
   max-width: 980px;
   padding: 0 20px;
@@ -32,8 +22,7 @@ input {
 }
 
 @media only screen and (max-width: 749px) {
-  body,
-  input {
+  body {
     font-size: 1.4rem;
   }
 }
@@ -53,42 +42,6 @@ h2,
   font-weight: 700;
   font-size: 3.4rem;
   line-height: 1.23529;
-}
-
-.input-group,
-.input-group--underline {
-  position: relative;
-  display: table;
-  width: 100%;
-  border-collapse: separate;
-  border-bottom: 2px solid #4a4a4a;
-}
-
-.input-group--underline input[type="text"],
-.input-group--underline input[type="email"],
-.input-group--underline input[type="tel"],
-.input-group--underline input[type="password"],
-.input-group--underline input[type="search"],
-.input-group--underline input[type="number"] {
-  padding-left: 10px;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-}
-
-.input-group__field,
-.input-group__btn {
-  display: table-cell;
-  margin: 0;
-  vertical-align: top;
-}
-
-.btn--clear {
-  position: relative;
-  background-color: transparent;
-  border: 0;
-  color: #4a4a4a;
-  transition: 0.15s opacity ease-out;
 }
 
 @media only screen and (min-width: 750px) {
@@ -128,7 +81,7 @@ h2,
 }
 
 .navigation {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   background-color: white;
@@ -142,7 +95,6 @@ h2,
   pointer-events: none;
   z-index: 5;
   max-height: none;
-  position: relative;
   opacity: 1;
   pointer-events: auto;
 }
@@ -170,7 +122,7 @@ h2,
   position: relative;
   font-size: 1.4rem;
   line-height: 3.55556;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.25rem;
   color: #242424;
   padding: 0 10px;
@@ -178,22 +130,6 @@ h2,
   text-transform: uppercase;
   opacity: 1;
   transition: transform 0.25s ease-out;
-}
-
-.navigation__link--secondary a {
-  font-size: 1.4rem;
-  line-height: 3.42857;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0.2rem;
-  padding: 0 10px;
-  transition: opacity 0.25s ease-out;
-}
-
-.navigation__search {
-  position: relative;
-  max-width: 250px;
-  margin: 0 auto;
 }
 
 .site-header-sections {
