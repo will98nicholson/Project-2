@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Shows } = require('../../models');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try { 
     const showData = await Shows.create({
     name: req.body.show_name,
