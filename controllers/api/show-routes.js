@@ -11,5 +11,13 @@ router.post('/', async (req, res) => {
   res.status(400).json("not working");
 }
 });
+router.get('/profile', async (req, res) => {
+  const showData = await Shows.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const shows = showData.map((show) => show.get({ plain: true }));
+      console.log(shows);
+      res.render('all', { shows });
+    });
 
 module.exports = router;

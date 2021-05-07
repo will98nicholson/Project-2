@@ -22,11 +22,13 @@
 
             <ul class="navigation__links">
               <li class="navigation__link navigation__link--secondary">
-                <a href="/login">Log in</a>
+                <a href="/">Home</a>
               </li>
-
               <li class="navigation__link navigation__link--secondary">
-                <a href="/profile">Create Profile</a>
+                <a href="/login">Create Account Log In</a>
+              </li>
+              <li class="navigation__link navigation__link--secondary">
+                <a href="/profile">My Profile</a>
               </li>
             </ul>
 
@@ -40,37 +42,10 @@
     </div>
   </header>
   {{{body}}}
-
-  <div class="feature-row feature-row--feature-row-0 feature-row--large 
-    feature-row__image-crop--none" data-section-id="feature-row-0" data-section-type="feature-row">
-
-    <div class="feature-row__item feature-row__text">
-
-      <h2 class="feature-row__heading h3">About This Site</h2>
-
-      <div class="rte-setting featured-row__subtext">
-        <p>This site enables you to have your
-          own profile to host all of your all time favorite shows</p>
-      </div>
-    </div>
-    <div class="form-outline">
-      <input type="search" id="keyword" class="form-control"
-        style="font-family: FontAwesome; width: 250px; height: 45px;" placeholder="Enter Keyword" />
-      <label class="form-label" for="form1"></label>
-    </div>
-    <div class="row buttonSection">
-      <button type="button" class="searchBtn btn-primary"> Search
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div>
-      <div class="results"></div>
-      <p id="showCon"></p>
-    </div>
-
-  </div>
-
   <script src="/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/js/login.js"></script>
 </body>
 
 </html>

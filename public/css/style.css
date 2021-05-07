@@ -1,6 +1,12 @@
 html {
   font-size: 62.5%;
-  background-color: #242424;
+  background-color: #c3c9c3;
+  max-height: none;
+  position: relative;
+}
+.profile{
+  font-size: 62.5%;
+  background-color: #c3c9c3;
   max-height: none;
   position: relative;
 }

@@ -44,7 +44,7 @@ function callApi(){
                         },
                     });
                     if (response.ok) {
-                        document.location.replace('/');
+                        document.location.replace('/profile');
                       } else {
                         console.log('not working');
                       }
