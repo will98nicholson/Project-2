@@ -20,10 +20,13 @@ router.get('/login', (req, res) => {
 });
 router.get('/profile', async (req, res) => {
   try {
-    // const profiles = await User.findAll({});
+    const user = await User.findByPk(req.session.user_id, { attributes: { exclude: ['password'] } });
     // console.log(profiles)
+    // console.log(user);
+    const users = { ...user.dataValues };
+    console.log(users);
+    res.render('profile', users);
 
-    res.render('profile');
   } catch (err) {
     console.log(err);
     res.status(err).json(err);
