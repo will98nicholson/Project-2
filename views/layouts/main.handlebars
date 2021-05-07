@@ -28,9 +28,12 @@
               <li class="navigation__link navigation__link--secondary">
                 <a href="/login">Create Profile</a>
               </li>
+              <li class="navigation__link navigation__link--secondary" id="logout">
+                <a href="/login">Logout</a>
+              </li>
             </ul>
 
-            <div class="navigation__search">
+            {{!-- <div class="navigation__search">
               <form>
                 <div class="input-group--underline">
                   <input class="input-group__field" type="search" name="q" value="" placeholder="Search"
@@ -46,14 +49,14 @@
                   </div>
                 </div>
               </form>
-            </div>
+            </div> --}}
           </div>
         </div>
       </nav>
 
       <div class="site-header__section site-header__section--title">
         <h1 class="h4">Welcome to The BINGE Club</h1>
-    </div>
+      </div>
   </header>
   {{{body}}}
   </div>
@@ -71,24 +74,23 @@
         <p>This site enables you to have your
           own profile to host all of your all time favorite shows</p>
       </div>
-            </div>
-          <div class="form-outline">
-        <input type="search" id="keyword" class="form-control"
-            style="font-family: FontAwesome; width: 250px; height: 45px;"
-            placeholder="Enter Keyword" />
-        <label class="form-label" for="form1"></label>
+    </div>
+    <div class="form-outline">
+      <input type="search" id="keyword" class="form-control"
+        style="font-family: FontAwesome; width: 250px; height: 45px;" placeholder="Enter Keyword" />
+      <label class="form-label" for="form1"></label>
     </div>
     <div class="row buttonSection">
-        <button type="button" class="searchBtn btn-primary"> Search
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
+      <button type="button" class="searchBtn btn-primary"> Search
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
     </div>
     <div>
       <div class="results"></div>
       <p id="showCon"></p>
     </div>
 
-    </div>
+  </div>
   </div>
   <script src="/js/script.js"></script>
 </body>
