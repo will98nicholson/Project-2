@@ -1,22 +1,23 @@
 // const responseStatus = response.statusText;
-
+function validateEmail(data) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(data);
+}
 const signupFunction = async (event) => {
     event.preventDefault();
 
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    if(password.length < 8){
+    if (password.length < 8) {
         alert("password must be 8 characters or more!")
     }
-    var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-    if(email.match(mailformat)){
-        console.log('success')    //The pop up alert for a valid email address
-        }
-        else
-        {
-        alert("You have entered an invalid email address!")   //The pop up alert for an invalid email address
-        }
+
+    if (validateEmail(email)) {
+        alert(email + "is a valid email");
+    } else {
+        alert(email + " is not a valid email");
+    }
     if (name && email && password) {
         const response = await fetch('/api/user-routes', {
             method: 'POST',
