@@ -22,12 +22,12 @@ router.get('/login', (req, res) => {
 router.get('/profile', async (req, res) => {
   try {
     const user = await User.findByPk(req.session.user_id, { attributes: { exclude: ['password'] } });
-    // console.log(profiles)
-    // console.log(user);
     const users = { ...user.dataValues };
     console.log(users);
-    res.render('profile', users);
-
+    const showData = await Shows.findAll({ attributes: { exclude: ['createdAt', 'updatedAt'] } }).catch((err) => { res.json(err);});
+    const shows = showData.map((show) => show.get({ plain: true }));
+    console.log(shows);
+    res.render('profile', {users, shows});
   } catch (err) {
     console.log(err);
     res.status(err).json(err);

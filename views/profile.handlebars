@@ -1,5 +1,5 @@
 <div class="profile">
-<h2 class="feature-row__text">Welcome Back, {{name}}!</h2>
+<h2 class="feature-row__text">Welcome Back, {{users.name}}!</h2>
 
 <div class="container-fluid">
 
@@ -21,12 +21,12 @@
                     <div class="results"></div>
                     <p id="showCon">
                 </div>
-                <div>
+                <div class="show-container">
                     <h2>My Favorite Shows!</h2>
+                    {{#each shows as |show|}}
+                          <h3>{{show.name}}</h3>
+                    {{/each}}
                 </div>
-                <ul class="list-group"></ul>
-
-
                <script src="/js/profile.js"></script>
                 </div>
             </div>

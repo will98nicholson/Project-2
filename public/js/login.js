@@ -6,17 +6,19 @@ const signupFunction = async (event) => {
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    if(password.length < 8){
+        alert("password must be 8 characters or more!")
+    }
     if (name && email && password) {
         const response = await fetch('/api/user-routes', {
             method: 'POST',
             body: JSON.stringify({ name, email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
-
         if (response.ok) {
             document.location.replace('/homepage');
         } else {
-            alert(response.statusText);
+            console.log(response.statusText);
         }
     }
 }
