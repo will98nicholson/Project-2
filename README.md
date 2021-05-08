@@ -65,7 +65,7 @@ The following technology are utilized in this application:
 
 ## Links
 
-* [Deployed app (Heroku)](#)
+* [Deployed app (Heroku)](https://safe-basin-89585.herokuapp.com/)
 
 ## Contributors
 
