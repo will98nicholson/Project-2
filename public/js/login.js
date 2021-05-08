@@ -11,11 +11,11 @@ const signupFunction = async (event) => {
     }
     var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
     if(email.match(mailformat)){
-        alert("You have entered a valid email address!");    //The pop up alert for a valid email address
+        console.log('success')    //The pop up alert for a valid email address
         }
         else
         {
-        console.log('valid email entered')   //The pop up alert for an invalid email address
+        alert("You have entered an invalid email address!")   //The pop up alert for an invalid email address
         }
     if (name && email && password) {
         const response = await fetch('/api/user-routes', {

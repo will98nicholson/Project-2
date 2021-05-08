@@ -9,7 +9,7 @@ function callApi(){
 
     const search = searchWord.replace(" ", "%20")
 
-    const tvAPI = 'http://api.tvmaze.com/singlesearch/shows?q=' + search;
+    const tvAPI = '//api.tvmaze.com/singlesearch/shows?q=' + search;
     //we will have to see how it fetches and stores data
     //singlesearch brings up the #1 just search brings them all 
 
