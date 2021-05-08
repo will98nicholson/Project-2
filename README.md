@@ -2,40 +2,86 @@
 
   # Project 2
 
+   Project 2: "Binge Club". The book club for TV shows - where TV show lovers can unite! Build your profile, search your favorite shows, and connect with other Bingers!
 
   
   ## Table of Contents
   
-  - [Installation](#installation)
+  - [User Story](#user-story)
   - [Usage](#usage)
-  - [GIF](#gif)
-  - [Testing](#testing)
+  - [Technology](#technology)
+  - [Links](#links)
+  - [Contributors](#contributors)
   - [Support](#support)
-  - [Contributing](#contributing)
-  - [Questions](#questions)
   - [License](#license)
   
-  ## Installation
+## User Story
 
-  
-  ## Usage
-  
+```
+AS A person who enjoys watching TV shows
 
-  ## Gif 
+I WANT an app that allows me to create a profile and input my favorite TV shows, genres, actors, etc.
 
-  ![gif]()
-  
-  ## Testing
+SO THAT I am able to join a "book club for TV shows" where I can enjoy/discuss my favorite TV shows with other users who have similar interests
+```
 
-  
-  ## Support
-  
-  Please [open an issue](https://github.com/will98nicholson/Project-2/issues/new) for support.
-  
-  ## Contributing
+## Usage
 
+```
+GIVEN an app to create a TV lover's profile
 
- ## Questions
+WHEN I create an account
+
+THEN my log in data is stored so I can return again
+
+WHEN I log in with my credentials
+
+THEN I am able to to search TV shows and save them to my profile
+
+WHEN I save shows to my profile
+
+THEN I can interact with other users who have also saved those shows
+```
+
+## Technology
+
+The following technology are utilized in this application:
+
+* Node.js and Express.js to create a RESTful API
+
+* Handlebars.js as the template engine
+
+* MySQL and the Sequelize ORM for the database
+
+* GET and POST routes for retrieving and adding new data
+
+* New library/package/technology not discussed in course [(UIKit for CSS](https://getuikit.com/docs/introduction) [and TV Maze API)](https://www.tvmaze.com/api)
+
+* Folder structure that meets the MVC paradigm
+
+* Authentication (express-session and cookies)
+
+* Protection for API keys and sensitive information with environment variables
+
+## Links
+
+* [Deployed app (Heroku)](#)
+
+## Contributors
+
+Contributors and their GitHub profiles.
+
+* [Nihal Abdalla - NihalAbdalla](https://github.com/NihalAbdalla)
+
+* [William Nicholson - will98nicholson](https://github.com/will98nicholson)
+
+* [Elizabeth Ogbonna - eloghub](https://github.com/eloghub)
+
+* [Morgan Schall - mschall11217](https://github.com/mschall217)
+
+## Support
+  
+Please [open an issue](https://github.com/will98nicholson/Project-2/issues/new) for support.
   
   
   ## License
@@ -241,3 +287,6 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+   
+---
+© 2021 Abdalla, Nicholson, Ogbonna, Schall
