@@ -9,6 +9,14 @@ const signupFunction = async (event) => {
     if(password.length < 8){
         alert("password must be 8 characters or more!")
     }
+    var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+    if(email.match(mailformat)){
+        alert("You have entered a valid email address!");    //The pop up alert for a valid email address
+        }
+        else
+        {
+        console.log('valid email entered')   //The pop up alert for an invalid email address
+        }
     if (name && email && password) {
         const response = await fetch('/api/user-routes', {
             method: 'POST',
@@ -16,7 +24,7 @@ const signupFunction = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            document.location.replace('/homepage');
+            document.location.replace('/profile');
         } else {
             console.log(response.statusText);
         }

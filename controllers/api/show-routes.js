@@ -1,8 +1,8 @@
 const router = require('express').Router();
-
+const withAuth = require('../../utils/auth');
 const { Shows } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try { 
     const showData = await Shows.create({
     name: req.body.show_name,

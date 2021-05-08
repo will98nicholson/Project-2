@@ -16,6 +16,7 @@ const Shows = require('./shows')
 //  Shows.hasMany(Comment, {
 //     foreignKey: 'id'
 //  })
+//if we had time we were going to add comment boards for the users to discuss
 
 
 module.exports = { User, Post, Shows }

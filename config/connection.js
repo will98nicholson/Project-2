@@ -5,7 +5,8 @@ let sequelize;
 
 if (process.env.user_db) {
   sequelize = new Sequelize(process.env.user_db);
-} else {
+}
+else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('./../models/');
 const { Shows } = require ('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -19,7 +20,8 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-router.get('/profile', async (req, res) => {
+
+router.get('/profile', withAuth, async (req, res) => {
   try {
     const user = await User.findByPk(req.session.user_id, { attributes: { exclude: ['password'] } });
     const users = { ...user.dataValues };
@@ -34,10 +36,7 @@ router.get('/profile', async (req, res) => {
   }
 });
 router.get('/homepage', async (req, res) => {
-  try {
-    // const posts = await Post.findAll({});
-    // console.log(posts)
-    // console.log(posts);
+  try {;
     res.render('homepage');
   } catch (err) {
     console.log(err);
