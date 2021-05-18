@@ -4,10 +4,10 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/auth');
-const compression = require('compression')
-const express = require('express')
-const app = express()
-app.use(compression({ filter: shouldCompress }))
+// const compression = require('compression')
+// const express = require('express')
+// const app = express()
+// app.use(compression({ filter: shouldCompress }))
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
